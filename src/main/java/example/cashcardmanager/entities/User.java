@@ -1,5 +1,6 @@
 package example.cashcardmanager.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,6 +36,7 @@ public class User {
     private Date createdDate;
 
     @OneToMany (mappedBy = "owner", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<CashCard> cashCards;
 
 }
