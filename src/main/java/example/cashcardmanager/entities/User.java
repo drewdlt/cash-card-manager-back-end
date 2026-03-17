@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table (name = "Users")
+@Table (name = "users")
 @Getter @Setter
 public class User {
 
@@ -34,7 +34,7 @@ public class User {
     @Column (name = "date_created")
     private Date createdDate;
 
-    @OneToMany (mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany (mappedBy = "owner", cascade = CascadeType.ALL)
     private List<CashCard> cashCards;
 
 }
