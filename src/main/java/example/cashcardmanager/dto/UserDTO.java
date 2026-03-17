@@ -1,5 +1,6 @@
 package example.cashcardmanager.dto;
 
+import example.cashcardmanager.entities.User;
 import lombok.Data;
 
 @Data
@@ -9,10 +10,10 @@ public class UserDTO {
     private String fullName;
     private String email;
 
-    public UserDTO(Long id, String username, String fullName, String email) {
-        this.id = id;
-        this.username = username;
-        this.fullName = fullName;
-        this.email = email;
+    public UserDTO(User user) {
+        this.id = user.getId();
+        this.username = user.getUsername();
+        this.fullName = user.getFirstName() + " " + user.getLastName();
+        this.email = user.getEmail();
     }
 }
