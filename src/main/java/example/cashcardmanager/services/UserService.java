@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UserService {
-    public UserDTO toDto(User user);
+    UserDTO toDto(User user);
 
-    public UserDTO findById(Long id);
+    UserDTO findById(Long id);
 }

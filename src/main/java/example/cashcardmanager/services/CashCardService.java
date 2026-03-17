@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface CashCardService {
-    public CashCardDTO toDto(CashCard cashCard);
+    CashCardDTO toDto(CashCard cashCard);
 
-    public CashCardDTO findById(Long id);
+    CashCardDTO findById(Long id);
 }
