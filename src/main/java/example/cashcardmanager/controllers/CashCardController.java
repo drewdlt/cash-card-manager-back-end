@@ -2,7 +2,6 @@ package example.cashcardmanager.controllers;
 
 import example.cashcardmanager.entities.CashCard;
 import example.cashcardmanager.repositories.CashCardRepository;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/cashcards")
+@RequestMapping("/cash-cards")
 public class CashCardController {
 
     private final CashCardRepository cashCardRepository;
